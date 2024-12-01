@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import DisplayBooksComponent from './DisplayBooksComponent.js';
-
+import '../custom.css';
 function ExploreSection() {
   return (
     <div className="text-center my-4 slide-in" style={{ backgroundColor: "black", opacity: 0.8 }}>
