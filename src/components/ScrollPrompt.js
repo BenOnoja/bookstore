@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '../custom.css';
 import DisplayBooksComponent from './DisplayBooksComponent.js';
 
 function ExploreSection() {
