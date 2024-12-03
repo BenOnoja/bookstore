@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import { useTelegramUser } from '../TelegramUserContext';
 import { Form, Button, Container, Alert, Spinner } from 'react-bootstrap';
-<<<<<<< HEAD
-
-=======
 import {useNavigate} from 'react-router-dom';
->>>>>>> 2e385ca (reconstructed the entire app)
 const UploadBookComponent = () => {
   const telegramUser = useTelegramUser();
   const [title, setTitle] = useState('');
@@ -20,11 +16,7 @@ const UploadBookComponent = () => {
 const API=process.env.REACT_APP_API_URL;
   const handleFileChange = (e) => setFile(e.target.files[0]);
   const handleCoverPhotoChange = (e) => setCoverPhoto(e.target.files[0]);
-<<<<<<< HEAD
-
-=======
 const navigate = useNavigate();
->>>>>>> 2e385ca (reconstructed the entire app)
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -37,10 +29,6 @@ const navigate = useNavigate();
     tg.showPopup({ message: 'Book upload is in progress...' });
     setUploading(true);
     setUploadMessage('');
-<<<<<<< HEAD
-
-=======
->>>>>>> 2e385ca (reconstructed the entire app)
     const formData = new FormData();
     formData.append('title', title);
     formData.append('description', description);
@@ -53,11 +41,7 @@ const navigate = useNavigate();
     formData.append('author', `${telegramUser.first_name} ${telegramUser.last_name || ''}`);
 
     try {
-<<<<<<< HEAD
-      const response = await fetch('${API}/api/upload-book', {
-=======
       const response = await fetch(`${API}/api/upload-book`, {
->>>>>>> 2e385ca (reconstructed the entire app)
         method: 'POST',
         body: formData,
       });
@@ -65,10 +49,7 @@ const navigate = useNavigate();
       if (response.ok) {
         setUploadMessage('Book upload successful');
         tg.showPopup({ message: 'Book upload successful' });
-<<<<<<< HEAD
-=======
         navigate(`/my-books/${telegramUser.id}`)
->>>>>>> 2e385ca (reconstructed the entire app)
       } else {
         throw new Error('Upload failed');
       }
@@ -184,11 +165,7 @@ const navigate = useNavigate();
 
       {uploadMessage && (
         <Alert
-<<<<<<< HEAD
-          variant={uploadMessage.includes('Book upload successful') ? 'success' : 'danger'}
-=======
           variant={uploadMessage==='Book upload successful'? 'success' : 'danger'}
->>>>>>> 2e385ca (reconstructed the entire app)
           className="mt-3"
         >
           {uploadMessage}

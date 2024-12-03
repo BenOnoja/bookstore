@@ -12,11 +12,7 @@ const API=process.env.REACT_APP_API_URL;
 
     const handlePaymentInitialization = async () => {
         try {
-<<<<<<< HEAD
-            const response = await fetch('${API}/api/initialize-payment', {
-=======
-            const response = await fetch(`${API}/api/initialize-payment`, {
->>>>>>> 2e385ca (reconstructed the entire app)
+const response = await fetch(`${API}/api/initialize-payment`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -52,11 +48,7 @@ const API=process.env.REACT_APP_API_URL;
 
             if (data.status) {
                 window.Telegram.WebApp.showAlert('Payment verified successfully!');
-<<<<<<< HEAD
-                navigate(`/book/${bookId}`);
-=======
                 navigate(`/read-book/${bookId}`);
->>>>>>> 2e385ca (reconstructed the entire app)
             } else {
                 window.Telegram.WebApp.showAlert('Payment verification failed. Please try again.');
             }

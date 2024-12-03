@@ -167,13 +167,10 @@ const API=process.env.REACT_APP_API_URL;
           >
             Start Reading
           </button>
-        </div>
-<<<<<<< HEAD
-=======
-        <p style={{color:'#F8E231'}}>{bookDetails.description}</p>
->>>>>>> 2e385ca (reconstructed the entire app)
+        </div>  
       </div>
-
+      <h4 style={{color:'#F8E231'}}> Book Description</>
+<p style={{color:'#F8E231'}}>{bookDetails.description}</p>
       {/* Reviews Section */}
       <div className="reviews-container" style={{ marginTop: '20px', color: '#F8E231' }}>
         <h5 style={{ color: '#F8E231' }}>Reviews:</h5>

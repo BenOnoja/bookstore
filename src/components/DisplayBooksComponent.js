@@ -1,22 +1,10 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-import axios from 'axios';
-=======
->>>>>>> 2e385ca (reconstructed the entire app)
 import { Container, Row, Col, Card, Button, Image } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const DisplayBooksComponent = () => {
   const [books, setBooks] = useState([]);
   const navigate = useNavigate();
-<<<<<<< HEAD
-const API=process.env.REACT_APP_API_URL;
-  useEffect(() => {
-    const fetchBooks = async () => {
-      try {
-        const response = await axios.get('${API}/api/get-books');
-        setBooks(response.data);
-=======
   const API = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
@@ -28,22 +16,14 @@ const API=process.env.REACT_APP_API_URL;
         }
         const data = await response.json();
         setBooks(data);
->>>>>>> 2e385ca (reconstructed the entire app)
       } catch (error) {
         console.error('Error fetching books:', error);
       }
     };
     fetchBooks();
-<<<<<<< HEAD
-  }, []);
-
-  const handleBookClick = (bookId) => {
-    // Navigate to the book review page
-=======
   }, [API]);
 
   const handleBookClick = (bookId) => {
->>>>>>> 2e385ca (reconstructed the entire app)
     navigate(`/book/${bookId}`);
   };
 
@@ -55,28 +35,21 @@ const API=process.env.REACT_APP_API_URL;
       <Row>
         {books.map((book) => (
           <Col key={book.id} xs={12} md={6} lg={4} className="mb-4">
-<<<<<<< HEAD
-            <Card style={{transform: 'scale(0.66)'}} className="h-100 shadow-sm">
-              <Card.Body className="d-flex flex-column">
-                <Card.Title>{book.title}</Card.Title>
-                <Card.Text><strong>Price:&#8358; {book.price}</strong></Card.Text>
-=======
-            <Card style={{ transform: 'scale(0.66)' }} className="h-100 shadow-sm">
+            <Card style={{ transform: 'scale(0.65)' }} className="h-100 shadow-sm">
               <Card.Body className="d-flex flex-column">
                 <Card.Title>{book.title}</Card.Title>
                 <Card.Text>
                   <strong>Price: &#8358; {book.price}</strong>
                 </Card.Text>
->>>>>>> 2e385ca (reconstructed the entire app)
                 <Image
-                  src={`${book.cover_photo_path}`}
+                  src={book.cover_photo_path}
                   alt={`Cover of ${book.title}`}
                   fluid
                   onClick={() => handleBookClick(book.id)}
                   style={{
                     cursor: 'pointer',
                     borderRadius: '10px',
-                    width: '50%',
+                    width: '100%',
                     height: 'auto',
                     alignSelf: 'center',
                   }}

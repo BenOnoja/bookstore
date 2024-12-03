@@ -26,12 +26,7 @@ const API=process.env.REACT_APP_API_URL;
     const handlePageChange = (e) => {
         const newPage = e.currentPage;
         setCurrentPage(newPage);
-
-<<<<<<< HEAD
-        fetch('${API}/api/save-progress', {
-=======
         fetch(`${API}/api/save-progress`, {
->>>>>>> 2e385ca (reconstructed the entire app)
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
