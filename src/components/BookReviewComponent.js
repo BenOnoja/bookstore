@@ -169,7 +169,7 @@ const API=process.env.REACT_APP_API_URL;
           </button>
         </div>  
       </div>
-      <h4 style={{color:'#F8E231'}}> Book Description</>
+      <h4 style={{color:'#F8E231'}}> Book Description</h4>
 <p style={{color:'#F8E231'}}>{bookDetails.description}</p>
       {/* Reviews Section */}
       <div className="reviews-container" style={{ marginTop: '20px', color: '#F8E231' }}>
