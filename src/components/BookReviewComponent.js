@@ -168,6 +168,10 @@ const API=process.env.REACT_APP_API_URL;
             Start Reading
           </button>
         </div>
+<<<<<<< HEAD
+=======
+        <p style={{color:'#F8E231'}}>{bookDetails.description}</p>
+>>>>>>> 2e385ca (reconstructed the entire app)
       </div>
 
       {/* Reviews Section */}

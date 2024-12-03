@@ -97,7 +97,11 @@ const API=process.env.REACT_APP_API_URL;
             renderBooks(uploadedBooks)
           ) : (
             <div>
+<<<<<<< HEAD
               <p>No books published yet. <Link to="/create-your-story">Click here to create a story.</Link></p>
+=======
+              <p>No books published yet. <Link to="/create-your-story" style ={{color:white}}>Click here to create a story.</Link></p>
+>>>>>>> 2e385ca (reconstructed the entire app)
             </div>
           )}
 

@@ -17,7 +17,11 @@ const API=process.env.REACT_APP_API_URL;
       setTelegramUser(user);
       const storeTelegramUser = async () => {
         try {
+<<<<<<< HEAD
           const response = await fetch('${API}/api/store-telegram-user', {
+=======
+          const response = await fetch(`${API}/api/store-telegram-user`, {
+>>>>>>> 2e385ca (reconstructed the entire app)
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
